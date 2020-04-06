@@ -1,4 +1,4 @@
-## Lista zadań:
+## Lista zadań - laboratoria nr 2:
 
 1. Sprawdzic czy zadane dowiązanie symboliczne (argument skryptu) wskazuje na podany obiekt. Rozwiązanie bazujące na porównaniu numerów i'node'ów jest niewystarczające. 
 2. Utworzyc kopię zadanego katalogu, przy czym dowiązania symboliczne, wskazujące na obiekty w katalogu powinny w kopii wskazywac na kopię obiektów, natomiast dowiązania symboliczne wskazujące poza katalog powinny w kopii wskazywac na oryginalny obiekt. Podkatalogów nie naley kopiowac (tylko pliki regularne i dowiązania).

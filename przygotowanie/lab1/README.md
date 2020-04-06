@@ -1,4 +1,4 @@
-## Lista zadań:
+## Lista zadań - laboratoria nr 1:
 
 1. Dany jest katalog D (pierwszy parametr skryptu). Należy zmienić nazwy wszystkich plików w D, do których my (nasz skrypt) mamy prawo zapisu, przez dopisanie dodatkowego członu ".old".
 2. Dane są katalog D (pierwszy parametr skryptu) oraz plik regularny P (drugi parametr skryptu). P zawiera (być może pustą) listę (zbiór wierszy). Należy w D utworzyć puste pliki regularne o nazwach zgodnych z tą listą. Jeżeli jakiś plik już istnieje, to nie powinien zostać zniszczony.
