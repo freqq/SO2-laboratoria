@@ -35,3 +35,13 @@ dowiązania twarde i miękkie do wskazanego pliku (parametr wywołania skryptu).
     2. wyświetli ścieżki do skryptów (wykonywalnych plików tekstowych – file -i)
     3. sprawdzi, czy podany w nagłówku skryptu (head) interpreter (zapis #!/ścieżka) istnieje w lokalnym systemie
     4. wyświetli ostrzeżenie w przypadku plików wykonywalnych, które były zmodyfikowane w ciągu ostatniego tygodnia
+
+5. W zadanym drzewie katalogów znaleźć podkatalogi, do których właściciel nie ma prawa odczytu lub prawa
+wykonania, natomiast ktoś inny (właściciel grupowy lub nie) ma prawo zapisu. Skrypt nie powinien zakładać
+żadnych dodatkowych warunków dotyczących praw dostępu.
+
+6. W zadanym drzewie katalogów znaleźć katalogi zawierające mniej niż $2 (zadany parametr), a więcej lub równo $3 podkatalogi. Skrypt musi uwzględniać ostrość nierówności!
+
+7. W zadanym drzewie katalogów znaleźć katalogi zawierające mniej niż $2 (zadany parametr), a więcej lub równo $3 podkatalogi. Skrypt musi uwzględniać ostrość nierówności!
+
+8. Skopiować zadane drzewo katalogów w zadane miejsce, uwzględniając pliki regularne, podkatalogi oraz dowiązania symboliczne. Dowiązania symboliczne w kopii powinny wskazywać na pierwotne obiekty.
