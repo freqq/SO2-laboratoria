@@ -16,3 +16,4 @@ fi
 
 directory_name=$1
 
+find $1 -type f -print | awk 'BEGIN { FS = "/" }; {split($NF,a,"."); gsub(/[[:upper:]]/, "_&", a[1]); if (substr(a[1],1,1) ~ /_/) sub(/_/, "", a[1]); $NF=""; sub (" ", "/", $0); gsub(" ", "", $0); print $0 "/" tolower(a[1]) "." a[2]}'

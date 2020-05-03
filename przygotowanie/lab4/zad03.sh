@@ -1,21 +1,22 @@
-# 4. W zadanym drzewie katalogow usun puste podkatalogi. Rowniez podkatalogi,
-# ktore stana sie puste po wczesniej usunietych podkatalogach. Wskazane jest
-# wykorzystanie opcji -depth komendy find
+#!/bin/bash
 
-#!/bash/bin
+export LANG=C
+export LC_ALL=C
+
+# Na wejsciu plik tekstowy. Na wyjsciu maja sie pojawiac slowa
+# z tekstu pierwotnego: Wyrazy, ktore maja wewnatrz ciagi co najmniej dwa,
+# kazdy zawierajacy co najmniej trzy znaki takie same z zakresu a-c
 
 if [ $# != 1 ]
 then
-    echo "Podales nieprawidlowa liczbe parametrow. Wymagane: 1";
+    echo "Podales zla liczbe parametrow. Wymagane: 1 (nazwa pliku)";
     exit 1;
 fi
 
-if [ ! -d $1 ]
-    echo "Podany katalog nie istnieje lub parametr nie jest katalogiem";
+if [ ! -f $1 ]
+then
+    echo "Podany plik nie istnieje!";
     exit 1;
 fi
 
-find $1 -type d - empty -depth | while read wynik
-do
-    rmdir $wynik
-done
+awk 'BEGIN { RS= " " } /(aaa+|bbb+|ccc+).*(aaa+|bbb+|ccc+)/  { print }' $1;
